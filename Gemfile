@@ -4,6 +4,8 @@ ruby '2.3.4'
 
 gem 'rails', '5.1.1'
 
+gem 'foreman', '0.84.0'
+
 gem 'coffee-rails', '~> 4.2.2'
 gem 'uglifier', '~> 3.2.0'
 
