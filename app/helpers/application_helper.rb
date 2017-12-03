@@ -556,11 +556,11 @@ module ApplicationHelper
   end
 
   def self.use_s3?
-    APP_CONFIG.s3_bucket_name && ApplicationHelper.has_aws_keys?
+    APP_CONFIG.s3_bucket_url && ApplicationHelper.has_aws_keys?
   end
 
   def self.use_upload_s3?
-    APP_CONFIG.s3_upload_bucket_name && ApplicationHelper.has_aws_keys?
+    APP_CONFIG.s3_upload_bucket_url && ApplicationHelper.has_aws_keys?
   end
 
   def self.has_aws_keys?

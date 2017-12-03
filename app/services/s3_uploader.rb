@@ -3,7 +3,7 @@ class S3Uploader
   def initialize()
     @aws_access_key_id = APP_CONFIG.aws_access_key_id
     @aws_secret_access_key = APP_CONFIG.aws_secret_access_key
-    @bucket = APP_CONFIG.s3_upload_bucket_name
+    @bucket_url = APP_CONFIG.s3_upload_bucket_url
     @acl = "public-read"
     @expiration = 10.hours.from_now
   end
@@ -20,7 +20,7 @@ class S3Uploader
   end
 
   def url
-    "https://#{@bucket}.s3.amazonaws.com/"
+    @bucket_url
   end
 
   private
